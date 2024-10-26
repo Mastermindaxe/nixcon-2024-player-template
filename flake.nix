@@ -20,8 +20,16 @@
       let pkgs = import nixpkgs { inherit system; };
       in rec {
         packages = {
+          rust-server = pkgs.rustPlatform.buildRustPackage rec {
+            pname = "server";
+            version = "0.1.0";
+
+            src = ./.;
+
+            cargoHash = pkgs.lib.fakeHash;
+          };
           webserver = pkgs.hello;
-          default = packages.webserver;
+          default = packages.rust-server;
         };
         apps.default = {
           type = "app";
