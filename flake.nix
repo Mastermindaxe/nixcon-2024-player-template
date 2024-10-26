@@ -48,7 +48,7 @@
           ({ pkgs, ... }: {
             playerConfig = {
               # Your github user:
-              githubLogin = "GITHUB_USER";
+              githubLogin = "Mastermindaxe";
               # You only need to change this if you changed the forked repo name.
               githubRepo = "nixcon-2024-player-template";
               # The nix derivation that will be used as the server process. It
