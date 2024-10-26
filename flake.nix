@@ -26,7 +26,7 @@
 
             src = ./.;
 
-            cargoHash = pkgs.lib.fakeHash;
+            cargoHash = "sha256-K64XvOCFIuSPL4JaP4jZl6Tz+U3wIu/nThL01zxwk9I=";
           };
           webserver = pkgs.hello;
           default = packages.rust-server;
